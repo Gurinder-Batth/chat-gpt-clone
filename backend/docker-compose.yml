@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: ./docker/php
+    image: "laravel"
+    restart: unless-stopped
+    container_name: "laravel-app"
+    ports:
+      - 9000:80 # Laravel
+    volumes:
+      - ./src:/var/www/html
+      - ./docker/apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./docker/apache/ports.conf:/etc/apache2/ports.conf
