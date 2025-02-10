@@ -146,7 +146,7 @@ function ChatContainer() {
       {/* Chat Input */}
       <div className="w-full flex items-center justify-center flex-col gap-3 my-4">
       <div
-        className={`flex gap-2 items-center px-3 py-2 w-[95%] lg:w-2/5 xl:w-1/2 rounded-lg shadow-lg transition-all duration-300 ${
+        className={`flex gap-2 items-center px-3 py-2 w-[95%] lg:w-2/2 xl:w-1/1 rounded-lg shadow-lg transition-all duration-300 ${
           theme === "dark" ? "bg-gray-700 text-white" : "bg-white-200  border-gray-200 border-2 text-black"
         }`}
       >

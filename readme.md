@@ -52,10 +52,10 @@ Here’s the updated README section with a **Screenshots** section:
    ```
 4. **(Optional) If using Google Login, add Firebase credentials:**  
    ```sh
-   FIREBASE_PUBLIC_FIREBASE_API_KEY="{api_key}"
-   FIREBASE_PUBLIC_FIREBASE_AUTH_DOMAIN="{project_id}.firebaseapp.com"
-   FIREBASE_PUBLIC_FIREBASE_PROJECT_ID="{project_id}"
-   FIREBASE_PUBLIC_FIREBASE_APP_ID="{app_id}"
+   REACT_APP_FIREBASE_API_KEY="{api_key}"
+   REACT_APP_FIREBASE_AUTH_DOMAIN="{project_id}.firebaseapp.com"
+   REACT_APP_FIREBASE_PROJECT_ID="{project_id}"
+   REACT_APP_FIREBASE_APP_ID="{app_id}"
    ```
 5. **Start the development server:**  
    ```sh
