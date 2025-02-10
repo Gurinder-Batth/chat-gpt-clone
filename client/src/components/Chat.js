@@ -5,6 +5,14 @@ import TypingLoader from "./TypingLoader";
 function Chat() {
   const { conversation, msgEnd, theme, loading } = useContext(ContextApp);
 
+  const formatMessageContent = (content) => {
+    // Split the content by new lines and return as an array of JSX elements
+    return content.split("\n").map((line, index) => (
+      <p key={index} className="text-[15px]">
+        {line}
+      </p>
+    ));
+  };
 
   return (
     <div
@@ -16,7 +24,7 @@ function Chat() {
         {conversation?.map((msg, i) => (
           <div
             key={i}
-            className={`flex items-center gap-2 lg:gap-5 my-2 p-3 rounded-md max-w-[80%] ${
+            className={`flex items-center  gap-2 lg:gap-5 my-2 p-3 rounded-md max-w-[80%] ${
               msg.role === "assistant"
                 ? theme === "dark"
                   ? "self-start bg-gray-800/80 text-white"
@@ -26,12 +34,15 @@ function Chat() {
                 : "self-end bg-gray-200 text-black"
             }`}
           >
-            <img
-              src={msg.role === "assistant" ? "/icon.png" : "/user-profile.png"}
-              alt="user"
-              className="w-10 h-10 rounded object-cover"
-            />
-            <p className="text-[15px]">{msg.content}</p>
+            {
+              !msg.content.includes("\n") &&
+              <img
+                src={msg.role === "assistant" ? "/icon.png" : "/user-profile.png"}
+                alt="user"
+                className="w-10 h-10 rounded object-cover"
+              />
+            }
+            <div>{formatMessageContent(msg.content)}</div>
           </div>
         ))}
         <TypingLoader loading={loading} />

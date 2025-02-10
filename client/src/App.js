@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="overflow-hidden">
         <Routes>
-          <Route path="/login" element={<Login />} /> {/* Fetch session and redirect */}
+          <Route path="/login" element={<Login />} /> 
           <Route path="/" element={<Session />} /> {/* Fetch session and redirect */}
           <Route path="/logout" element={<Logout />} /> {/* Fetch session and redirect */}
           <Route path="/chat/:sessionId" element={<Home />} />

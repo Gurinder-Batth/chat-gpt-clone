@@ -7,20 +7,23 @@ const firebaseConfig = {
   projectId: process.env.FIREBASE_PUBLIC_FIREBASE_PROJECT_ID,
   appId: process.env.FIREBASE_PUBLIC_FIREBASE_APP_ID,
 };
+
+let auth;
+let signInWithGoogle;
+if (firebaseConfig.apiKey) {
+  const app = initializeApp(firebaseConfig);
+  auth = getAuth(app);
+  const provider = new GoogleAuthProvider();
   
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
-
-const signInWithGoogle = async () => {
-  try {
-    const result = await signInWithPopup(auth, provider);
-    const token = await result.user.getIdToken();
-    return token;
-  } catch (error) {
-    console.error("Error logging in:", error);
-  }
-};
+  signInWithGoogle = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const token = await result.user.getIdToken();
+      return token;
+    } catch (error) {
+      console.error("Error logging in:", error);
+    }
+  };
+}
 
 export { auth, signInWithGoogle };
