@@ -22,7 +22,7 @@ Here’s the updated README section with a **Screenshots** section:
 - Supports multiple backend implementations: **FastAPI, Node.js** (more can be added).  
 - Supports multiple LLMs: **DeepSeek (local), Gemini (online), and others (extensible).**  
 
-**## 📸 Screenshots  **
+## 📸 Screenshots  **
 
 ### Guest User  
 ![Guest User](https://raw.githubusercontent.com/Gurinder-Batth/chat-gpt-clone/refs/heads/main/client/screenshot/guest-user.png)  
