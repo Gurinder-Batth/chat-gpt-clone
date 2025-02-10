@@ -106,7 +106,7 @@ function ChatContainer() {
   return (
     <div
       className={`h-screen w-full lg:w-[calc(100%-300px)] ${
-        theme === "dark" ? "bg-gray-700 text-white" : "bg-gray-100 text-black"
+        theme === "dark" ? "bg-gray-700 text-white" : " text-black"
       } flex items-start justify-between flex-col p-2 transition-all duration-300`}
     >
       {/* Theme Toggle Button */}

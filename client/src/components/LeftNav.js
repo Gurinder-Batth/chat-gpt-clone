@@ -20,7 +20,7 @@ function LeftNav() {
             ? "hidden"
             : theme === "dark"
             ? "bg-gray-900 border-gray-500 text-white"
-            : "bg-gray-100 border-gray-300 text-black"
+            : " border-gray-300 text-black"
         }`}
     >
      <div className="flex items-start justify-between w-full">

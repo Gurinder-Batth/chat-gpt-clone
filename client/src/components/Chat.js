@@ -17,7 +17,7 @@ function Chat() {
   return (
     <div
       className={`w-full h-[85%] flex items-center justify-center overflow-hidden overflow-y-auto px-2 py-1 scroll ${
-        theme === "dark" ? "bg-gray-900" : "bg-gray-100"
+        theme === "dark" ? "bg-gray-900" : ""
       }`}
     >
       <div className="w-full lg:w-4/5 flex flex-col h-full items-start justify-start">
